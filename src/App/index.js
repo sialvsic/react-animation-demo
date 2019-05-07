@@ -1,13 +1,15 @@
 import React from 'react';
-import Box from './styles/Box';
-import Trigger from './styles/Trigger';
+import { HashRouter as Router, Route } from 'react-router-dom';
+import Basic from './component/basic';
+import Home from './component/home';
 
 export class App extends React.Component {
   render() {
     return (
-      <Trigger className='a'>
-        <Box className='b'/>
-      </Trigger>
+      <Router>
+        <Route path="/" exact={ true } component={ Home }/>
+        <Route path="/basic" component={ Basic }/>
+      </Router>
     );
   }
 }
