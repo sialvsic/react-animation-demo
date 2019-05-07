@@ -6,7 +6,16 @@
   box-sizing: border-box;
   width: 100%;
   -webkit-overflow-scrolling: touch;
-  transition: transform 1s ease-in-out;
+  transition: transform 500ms ease-in-out;
+}
+
+@keyframes leftIn {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+
+  }
 }
 
 @keyframes leftOut {
@@ -19,28 +28,18 @@
   }
 }
 
-@keyframes leftIn {
-  from {
-    transform: translate3d(100%, 0, 0);
-  }
-  to {
-
-  }
-}
-
-/*暂时无用*/
-@keyframes RightOut {
-  100% {
-    transform: translate3d(100%, 0, 0);
-  }
-}
-
+/*无用样式*/
 @keyframes RightIn {
   0% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes RightOut {
+  100% {
     transform: translate3d(-100%, 0, 0);
   }
 }
-
 
 .page-enter {
 }
@@ -51,14 +50,12 @@
 }
 
 .page-enter-done {
-  /*transform: translate(-100%, 0);*/
 }
 
 .page-exit {
 }
 
 .page-exit-active {
-  /*animation: leftOut 500ms none ease-in-out;*/
   animation: leftOut 500ms both ease-in-out;
 }
 

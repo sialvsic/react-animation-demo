@@ -6,7 +6,7 @@
   box-sizing: border-box;
   width: 100%;
   -webkit-overflow-scrolling: touch;
-  transition: transform 1s ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 
 .page-enter {
