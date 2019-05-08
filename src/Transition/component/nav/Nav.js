@@ -8,7 +8,6 @@ export default function Nav() {
       <Link
         to={ {
           pathname: '/',
-          state: { back: true },
         } }
         className="nav__link"
       >
@@ -17,7 +16,6 @@ export default function Nav() {
       <Link
         to={ {
           pathname: '/about',
-          state: { back: true },
         } }
         className="nav__link"
       >
@@ -26,7 +24,6 @@ export default function Nav() {
       <Link
         to={ {
           pathname: '/name',
-          state: { back: true },
         } }
         className="nav__link"
       >
