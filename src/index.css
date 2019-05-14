@@ -5,3 +5,18 @@ body {
 .main {
   position: relative;
 }
+
+
+.fix-top {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+}
+
+
+.container {
+  margin-top: 50px
+}

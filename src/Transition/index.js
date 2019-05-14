@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Switch, HashRouter } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
@@ -9,9 +9,22 @@ import Name from './Name';
 
 const App = () => {
 
+  const [toLeft, setToLeft] = useState(true);
+
+  const onToRightClick = () => {
+    setToLeft(false);
+  };
+
+  const onToLeftClick = () => {
+    setToLeft(true);
+  };
+
   return (
     <HashRouter>
       <>
+
+        <button onClick={ onToLeftClick }>To Left</button>
+        <button onClick={ onToRightClick }>To Right</button>
         <Nav/>
         <main className='main'>
           <Route
@@ -20,7 +33,7 @@ const App = () => {
                 <TransitionGroup>
                   <CSSTransition
                     key={ location.pathname }
-                    classNames="page"
+                    classNames={ toLeft ? 'page-to-left' : 'page-to-right' }
                     timeout={ {
                       enter: 500,
                       exit: 500,
@@ -29,7 +42,7 @@ const App = () => {
                     <Route
                       location={ location }
                       render={ () => (
-                        <Switch>
+                        <Switch location={ location }>
                           <Route
                             exact={ true }
                             path="/"

@@ -6,7 +6,7 @@
   transition: transform 500ms ease-in-out;
 }
 
-@keyframes Right {
+@keyframes RightToCenter {
   from {
     transform: translate3d(100%, 0, 0);
   }
@@ -15,37 +15,47 @@
   }
 }
 
-@keyframes Left {
+@keyframes CenterToLeft {
   from {
     transform: translate3d(0%, 0, 0);
   }
-
   to {
     transform: translate3d(-100%, 0, 0);
   }
 }
 
-/*无用样式*/
-@keyframes RightIn {
-  0% {
+@keyframes LeftToCenter {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
     transform: translate3d(0%, 0, 0);
   }
 }
 
-@keyframes RightOut {
-  100% {
-    transform: translate3d(-100%, 0, 0);
+@keyframes CenterToRight {
+  from {
+    transform: translate3d(0%, 0, 0);
+  }
+  to {
+    transform: translate3d(100%, 0, 0);
   }
 }
 
 .page-enter {
 }
 
-.page-enter-active {
-  /*animation: leftIn 500ms none ease-in-out;*/
+.page-to-left-enter-active {
+  /*animation: CenterToLeftIn 500ms none ease-in-out;*/
   position: absolute;
   width: 100%;
-  animation: Right 500ms both ease-in-out;
+  animation: RightToCenter 500ms both ease-in-out;
+}
+
+.page-to-left-exit-active {
+  position: absolute;
+  width: 100%;
+  animation: CenterToLeft 500ms both ease-in-out;
 }
 
 .page-enter-done {
@@ -54,10 +64,17 @@
 .page-exit {
 }
 
-.page-exit-active {
+.page-to-right-enter-active {
+  /*animation: CenterToLeftIn 500ms none ease-in-out;*/
   position: absolute;
   width: 100%;
-  animation: Left 500ms both ease-in-out;
+  animation: LeftToCenter 500ms both ease-in-out;
+}
+
+.page-to-right-exit-active {
+  position: absolute;
+  width: 100%;
+  animation: CenterToRight 500ms both ease-in-out;
 }
 
 .page-exit-done {
