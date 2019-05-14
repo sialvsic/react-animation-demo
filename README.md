@@ -7,8 +7,6 @@
 $ npm start
 ```
 
-## version
-
 
 ## 过程分析
 1.page render
@@ -24,7 +22,7 @@ page page-enter  About  新
 translate(100%, 0)
 
 page page-exit   Home  老
-translate(-100%, 0)
+translate(0%, 0)
 
 
 step2: entering
@@ -41,3 +39,17 @@ page page-enter-done About  新
 page page-exit-done Home  老
 page-exit-done: transform: translate(-100%, 0);
 ```
+
+## 注意的点
+1. translate(0%, 0) => translate3d(0%, 0, 0)
+2. transform or animation
+3. 在过程中加入 `absolute` 
+
+
+## 分析
+
+## 参考
+
+- https://codesandbox.io/s/olql83nlky
+ 
+## version

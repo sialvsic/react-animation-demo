@@ -1,34 +1,35 @@
 .page {
-  height: 100vh;
-  position: absolute;
-  top: 300px;
-  padding: 0 30px;
   box-sizing: border-box;
   width: 100%;
+  padding: 0 30px;
   -webkit-overflow-scrolling: touch;
   transition: transform 500ms ease-in-out;
 }
 
 .page-enter {
-  transform: translate(100%, 0);
+  transform: translate3d(100%, 0, 0);
 }
 
 .page-enter-active {
-  transform: translate(0%, 0);
+  position: absolute;
+  width: 100%;
+  transform: translate3d(0%, 0, 0);
 }
 
 .page-enter-done {
 }
 
 .page-exit {
-  transform: translate(0%, 0);
+  transform: translate3d(0%, 0, 0);
 }
 
 .page-exit-active {
-  transform: translate(-100%, 0);
+  position: absolute;
+  width: 100%;
+  transform: translate3d(-100%, 0, 0);
 }
 
 .page-exit-done {
-  transform: translate(-100%, 0);
+  transform: translate3d(-100%, 0, 0);
 }
 

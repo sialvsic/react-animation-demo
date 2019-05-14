@@ -1,26 +1,23 @@
 .page {
-  height: 100vh;
-  position: absolute;
-  top: 300px;
-  padding: 0 30px;
   box-sizing: border-box;
   width: 100%;
+  padding: 0 30px;
   -webkit-overflow-scrolling: touch;
   transition: transform 500ms ease-in-out;
 }
 
-@keyframes leftIn {
+@keyframes Right {
   from {
     transform: translate3d(100%, 0, 0);
   }
   to {
-
+    transform: translate3d(0%, 0, 0);
   }
 }
 
-@keyframes leftOut {
+@keyframes Left {
   from {
-
+    transform: translate3d(0%, 0, 0);
   }
 
   to {
@@ -46,7 +43,9 @@
 
 .page-enter-active {
   /*animation: leftIn 500ms none ease-in-out;*/
-  animation: leftIn 500ms both ease-in-out;
+  position: absolute;
+  width: 100%;
+  animation: Right 500ms both ease-in-out;
 }
 
 .page-enter-done {
@@ -56,7 +55,9 @@
 }
 
 .page-exit-active {
-  animation: leftOut 500ms both ease-in-out;
+  position: absolute;
+  width: 100%;
+  animation: Left 500ms both ease-in-out;
 }
 
 .page-exit-done {

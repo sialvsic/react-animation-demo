@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import './Page.css';
-// import './Page-keyframes.css';
+// import './Page.css';
+import './Page-keyframes.css';
 
 function Page({ children }) {
 
