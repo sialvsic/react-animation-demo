@@ -1,0 +1,53 @@
+.page {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30px;
+  z-index: 20;
+  -webkit-overflow-scrolling: touch;
+}
+
+@keyframes RightToCenter {
+  0% {
+    transform: translate(100%, 0);
+  }
+}
+
+@keyframes CenterToLeft {
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes LeftToCenter {
+  0% { transform: translate(-100%, 0); }
+}
+
+@keyframes CenterToRight {
+  100% { transform: translate(100%, 0); }
+}
+
+.page-to-left-enter-active {
+  /*animation: CenterToLeftIn 10000ms none ease-in;*/
+  position: absolute;
+  width: 100%;
+  animation: RightToCenter 500ms both ease-in-out;
+}
+
+.page-to-left-exit-active {
+  position: absolute;
+  width: 100%;
+  animation: CenterToLeft 500ms both ease-in-out;
+}
+
+.page-to-right-enter-active {
+  /*animation: CenterToLeftIn 1000ms none ease-in;*/
+  position: absolute;
+  width: 100%;
+  animation: LeftToCenter 500ms both ease-in-out;
+}
+
+.page-to-right-exit-active {
+  position: absolute;
+  width: 100%;
+  animation: CenterToRight 500ms both ease-in-out;
+}

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Transition from './Transition';
+import TransitionPlus from './TransitionPlus';
 
 const renderPage = (page) => {
 
@@ -11,8 +12,9 @@ const renderPage = (page) => {
       return <App/>;
     case 'app2':
       return <Transition/>;
+    case 'app3':
+      return <TransitionPlus/>;
   }
-
   return;
 };
 
@@ -25,6 +27,10 @@ const Select = () => {
     setPage(page);
   };
 
+  const onClear = () => {
+    window.location.href = '/';
+  };
+
   return (
     <div>
       <div className='fix-top'>
@@ -32,6 +38,7 @@ const Select = () => {
         <button onClick={ () => onClick('app1') }>app1</button>
         <button onClick={ () => onClick('app2') }>app2</button>
         <button onClick={ () => onClick('app3') }>app3</button>
+        <button onClick={ () => onClear() }>clear url</button>
       </div>
       <div className='container'>
         { result }

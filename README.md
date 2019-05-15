@@ -48,6 +48,11 @@ page-exit-done: transform: translate(-100%, 0);
 
 ## 分析
 
+实现了三个动画，关于例3，有几点问题
+- 浏览器back, next的同步问题
+- safari手势滑动屏幕的二次滚动问题
+- 虽然推荐使用translate3d，但是实际使用中发现在safari mobile浏览器上会出现左侧动画向右侧显示的白屏问题
+
 ## 参考
 
 - https://codesandbox.io/s/olql83nlky

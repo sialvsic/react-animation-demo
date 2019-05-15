@@ -1,0 +1,40 @@
+.page {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30px;
+  z-index: 20;
+  -webkit-overflow-scrolling: touch;
+  transition: transform 500ms ease-in-out;
+}
+
+/*需要改*/
+
+.page-enter {
+  transform: translate3d(100%, 0, 0);
+}
+
+.page-enter-active {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  transform: translate3d(0%, 0, 0);
+}
+
+.page-enter-done {
+}
+
+.page-exit {
+  transform: translate3d(0%, 0, 0);
+}
+
+.page-exit-active {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.page-exit-done {
+  transform: translate3d(-100%, 0, 0);
+}
+
